@@ -6,32 +6,32 @@ function App() {
 id: 'e1',
 title: 'Mortgage',
 amount: 2100 ,
-date:  Date('December 17, 1995 03:24:00')
+date:  new Date(2012, 11, 20, 3, 0, 0)
 },
 {
   id: 'e2',
   title: 'Car fuel',
   amount: 40,
-  date: Date('December 17, 1995 03:24:00')
+  date: new Date(2012, 11, 20, 3, 0, 0)
 },
 {
   id: 'e3',
   title: 'food',
   amount: 50,
-  date: Date('December 17, 1995 03:24:00')
+  date: new Date(2012, 11, 20, 3, 0, 0)
 },
 {
   id: 'e4',
   title: 'taxes',
   amount: 200,
-  date:  Date('December 17, 1995 03:24:00')
+  date:  new Date(2012, 11, 20, 3, 0, 0)
 },
   ];
 
   return (
     <div>
       <h2>Let's get started!</h2>
-      <ExpenseItem></ExpenseItem>
+      
       <ExpenseItem 
       title={expenses[0].title} 
       amount={expenses[0].amount}
