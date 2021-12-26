@@ -1,3 +1,5 @@
+import React from 'react';
+import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
 function App() {
@@ -66,12 +68,12 @@ date:  new Date("2021-12-27")
 
   return (
     <div>
-      <h2>$1000 Budget</h2>
+      {/* <h2>$1000 Budget</h2>
       <p>$535 Affinity CU</p>
-      <p>$402 Capital One 360</p>
+      <p>$402 Capital One 360</p> */}
       {/* <p>**$550 Capital One CC</p> */}
       
-      <p></p>
+    <NewExpense />
       
      <Expenses items={expenses} />
       
