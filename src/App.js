@@ -66,6 +66,11 @@ date:  new Date("2021-12-27")
 }
   ];
 
+  const addExpenseHandler = expense  => {
+    console.log('In app.js');
+    console.log(expense);
+  }
+
   return (
     <div>
       {/* <h2>$1000 Budget</h2>
@@ -73,8 +78,7 @@ date:  new Date("2021-12-27")
       <p>$402 Capital One 360</p> */}
       {/* <p>**$550 Capital One CC</p> */}
       
-    <NewExpense />
-      
+    <NewExpense onAddExpense={addExpenseHandler}/>
      <Expenses items={expenses} />
       
     </div>

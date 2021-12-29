@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
@@ -26,7 +26,8 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
+        // data being passed from newExpense() via props to be stored in expenseData
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
@@ -38,6 +39,7 @@ const ExpenseForm = () => {
             <div className="new-expense__control">
                 <label>Title</label>
                 <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
+                {/* the value and the onChange attribute creates two-way binding allowing you to gather input and change it */}
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
