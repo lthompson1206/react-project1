@@ -80,7 +80,7 @@ date:  new Date("2021-12-27")
       
     <NewExpense onAddExpense={addExpenseHandler}/>
      <Expenses items={expenses} />
-      
+      {/* these are the child components being utilized  */}
     </div>
   );
 }
