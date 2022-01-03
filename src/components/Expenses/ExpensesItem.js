@@ -6,7 +6,8 @@ import "./ExpensesItem.css";
 const ExpenseItem = (props) => {
 // this is a stateless component aka dumb component which is here to just output some data
   return (
-    <Card className="expense-item">
+    <li>
+<Card className="expense-item">
       <ExpenseDate date={props.date} />
       {/* ExpenseDate comes from lines 9-11 from ExpenseDate.js (component A to compenent B via props)*/}
       <div className="expense-item__description">
@@ -15,6 +16,8 @@ const ExpenseItem = (props) => {
       </div>
      
     </Card>
+    </li>
+    
   );
 }
 
